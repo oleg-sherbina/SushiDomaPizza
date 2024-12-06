@@ -7,6 +7,14 @@ body{
    margin: 0;
 }
 
+.hide {
+   display: none !important;
+}
+
+
+
+
+
 
 
 
@@ -27,14 +35,20 @@ body{
 
 }
 
-
-
+/* 
+.img-section {
+   background-color: #0A0A0A;
+} */
 
 
 .common-section {
+
+   margin-top: -30px;
    text-align: center;
    padding: 80px 0;
 }
+
+
 
 .common-section--bark {
    background-color: #192024;
@@ -135,7 +149,7 @@ a {
 
 .welcome {
                      box-sizing: border-box;
-                  min-height: 100vh;
+                  min-height: 92vh;
                     margin-top: -130px ;
             padding: 250px  ;
       background-image: url("./img/pizza-2.jpeg");
@@ -144,6 +158,19 @@ a {
          background-size: cover;
                background-position: center;
 }
+
+.welcome::after {
+content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+      height: 50%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+      pointer-events: none;
+}
+
+
 
 /* .welcome::before{
    content: '';
@@ -199,12 +226,6 @@ a {
 
 
 
-         
-
-.tab-section {}
-
-
-.tabs {}
 
 .tabs__nav {
    margin-bottom: 50px;
@@ -229,7 +250,7 @@ a {
    margin-left: 15px;
 }
 
-.active {}
+
 
 .tabs__item {
    animation: fade 1s;
@@ -251,7 +272,11 @@ a {
 
 .tabs__item img {
    margin-bottom: 15px;
+   max-width: 300px;
+      max-height: 200px;
 
+
+   margin-right: 15px;
 }
 
 .tabs__item h4 {
